@@ -36,7 +36,8 @@ class MarcaController extends Controller
      */
     public function store(StoreMarcaRequest $request)
     {
-        return "Chegou";
+        $marca =  Marca::create($request->all());
+        return $marca;
     }
 
     /**
