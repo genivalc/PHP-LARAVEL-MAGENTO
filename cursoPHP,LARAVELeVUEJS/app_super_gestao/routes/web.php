@@ -25,9 +25,9 @@ Route::get('/login', function() { return 'e'; })->name('site.login');
 
 //sub rotas
 Route::prefix('/app')->group(function(){
-    Route::get('/clientes', function(){ return 'teste'; })->name('site.clientes');;
-    Route::get('/fornecedores', function(){ return 'teste'; })->name('site.fornecedores');;
-    Route::get('/produtos', function(){ return 'teste'; })->name('site.produtos');;
+    Route::get('/clientes', function(){return 'Clientes';})->name('app.clientes');
+    Route::get('/fornecedores', 'FornecedorController@index')->name('app.fornecedores');
+    Route::get('/produtos', function(){return 'produtos';})->name('app.produtos');
 });
 
 //routas redurect
